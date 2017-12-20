@@ -1,0 +1,16 @@
+#!/bin/sh
+# Copyright (C) 2017 O.S. Systems Sofware LTDA
+#
+# SPDX-License-Identifier:     GPL-2.0
+
+if [ ! -e "/data" ]; then
+    echo "Please provide the directory of images as a volume."
+    exit 1
+fi
+
+if [ ! -f /data/*.uhupkg ]; then
+    echo "Please provide a directory with a valid uhupkg image."
+    exit 1
+fi
+
+./updatehub-server --debug /data

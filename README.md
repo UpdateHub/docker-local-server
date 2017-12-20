@@ -10,5 +10,5 @@ a UpdateHub local server for test and development.
 docker run --rm \
        -v $PWD:/data \
        -p 8080 \
-       -it updatehub/local-server /data
+       -it updatehub/local-server
 ```
